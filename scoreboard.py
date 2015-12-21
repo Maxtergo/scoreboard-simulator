@@ -197,7 +197,6 @@ def execute_cycle_number():
   i="void"
   while( not (i.isdigit()) and not (len(i) == 0)):
     i=raw_input("\n\nPress Enter for next cycle or enter the cycle number: ")
-    print(len(i))
   
   if(not (i.isdigit())):
     m=0;
@@ -224,7 +223,7 @@ def printAll():
     print(str(instruction).replace("-1","  "))
   print("\n")
   print(sb.getdata());
-  m=execute_cycle_number()
+  m=execute_cycle_number()+sb.clock-1
   clearscr();
   return m
 
